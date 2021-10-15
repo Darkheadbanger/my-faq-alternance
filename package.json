@@ -39,5 +39,9 @@
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0"
-  }
+  },
+  "description": "## Build Setup",
+  "main": ".eslintrc.js",
+  "author": "David_Bouhaben",
+  "license": "ISC"
 }

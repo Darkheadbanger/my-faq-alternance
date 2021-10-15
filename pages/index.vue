@@ -1,5 +1,7 @@
 <template>
-  <Tutorial/>
+  <div id="__nuxt">
+    <div id="__layout"></div>
+  </div>
 </template>
 
 <script>
