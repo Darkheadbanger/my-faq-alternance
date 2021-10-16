@@ -16,18 +16,3 @@
 <script>
 export default {}
 </script>
-<style lang="scss">
-* {
-  box-sizing: border-box;
-  border: 0 solid $border_logo;
-}
-// #body {
-//   overflow-x: hidden;
-//   margin: 0;
-//   background-color: $background_color;
-// }
-
-// #template-shoppingauto {
-//   font-family: 'EuclidSquare', sans-serif;
-// }
-</style>
