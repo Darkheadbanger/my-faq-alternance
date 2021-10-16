@@ -17,8 +17,6 @@
 export default {}
 </script>
 <style lang="scss">
-$border_logo: #e2e8f0;
-
 * {
   box-sizing: border-box;
   border: 0 solid $border_logo;

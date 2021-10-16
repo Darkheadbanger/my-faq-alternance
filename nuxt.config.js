@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~layouts/global.scss'],
+  css: ['~assets/7-1/base/global.scss'],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/aos.client'],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,8 +35,11 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  styleResources: {
+    scss: ['~/assets/7-1/utils/variables.scss'],
+  },
 }
