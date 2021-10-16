@@ -7,26 +7,29 @@
   >
     <div id="__nuxt">
       <div id="__layout">
-        <div class="template-shoppingauto"><Aos /></div>
+        <Aos />
       </div>
     </div>
   </body>
-</template>
+</template> 
 
 <script>
 export default {}
 </script>
 <style lang="scss">
 $border_logo: #e2e8f0;
-$background_color: #f00;
 
 * {
   box-sizing: border-box;
   border: 0 solid $border_logo;
 }
-#body {
-  overflow-x: hidden;
-  margin: 0;
-  background-color: $background_color;
-}
+// #body {
+//   overflow-x: hidden;
+//   margin: 0;
+//   background-color: $background_color;
+// }
+
+// #template-shoppingauto {
+//   font-family: 'EuclidSquare', sans-serif;
+// }
 </style>
