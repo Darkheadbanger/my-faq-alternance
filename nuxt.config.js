@@ -49,4 +49,7 @@ export default {
   styleResources: {
     scss: ['~/assets/utils/variables.scss'],
   },
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/],
+  },
 }

@@ -19,8 +19,9 @@
               "
             >
               <a class="text-sm text-white flex nuxt-link-active" href="/">
-                <FontAwesomeIcon :icon="['fab', 'codepen']" title="Codepen" />
-                Retourner à l'accueil
+                <font-awesome-icon icon="['fas', 'codepen']" title="Codepen" />
+                <font-awesome-icon icon="spinner" /> l'accueil
+                <font-awesome-icon :icon="['fab', 'font-awesome']" />
               </a>
               <h1 class="text-sm text-2xl font-bold md:text-3x1">FAQ</h1>
             </div>

@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
-// this disables the default css and instead you can use nuxt styles or in my case tailwind styles
+// This is important, we are going to let Nuxt.js worry about the CSS
 config.autoAddCss = false
 
-library.add(fas)
-// library.add(faGithub, faTwitter, faDev, faCodepen, faInstagram, fas)
+// You can add your icons directly in this plugin. See other examples for how you
+// can add other styles or just individual icons.
+library.add(faSpinner)
 
 // Register the component globally
-Vue.component('FontAwesomeIcon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
