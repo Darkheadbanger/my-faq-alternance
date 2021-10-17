@@ -7,7 +7,7 @@
   >
     <div id="__nuxt">
       <div id="__layout">
-        <Aos />
+        <Nav />
       </div>
     </div>
   </body>
