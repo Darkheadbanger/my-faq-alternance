@@ -8,6 +8,7 @@
     <div id="__nuxt">
       <div id="__layout">
         <Nav />
+        <Hero-Header />
       </div>
     </div>
   </body>
