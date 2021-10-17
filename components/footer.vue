@@ -2,7 +2,7 @@
   <!-- footer qui englobe tout -->
   <footer>
     <!-- Pour organiser -->
-    <div class="container flex flex-col py-4 md:py-6">
+    <div class="container flex flex-col py-1 md:py-6">
       <!-- container footer -->
       <div class="flex-col">
         <!-- logo shopping auto -->
@@ -32,39 +32,91 @@
         <div class="text-left flex-col space-between mt-8">
           <p>Suivez-nous</p>
           <!-- reseaux sociaux -->
-          <nav class="flex items-end mb-auto">
+          <nav class="flex justify-end mb-auto">
             <!-- a 3X -->
+            <!-- facebook -->
             <a
               class="fa-container btn-primary"
               href="https://www.facebook.com/shoppingauto"
             >
-              <font-awesome-icon :icon="['fab', 'facebook']" size="2x" />
+              <font-awesome-icon
+                color="#00f3c3"
+                :icon="['fab', 'facebook']"
+                size="2x"
+              />
+            </a>
+            <!-- Instagram -->
+            <a
+              class="fa-container btn-primary instagram instagram--color ml-0.5"
+              href="https://www.facebook.com/shoppingauto"
+            >
+              <font-awesome-icon
+                color="#00f3c3"
+                :icon="['fab', 'instagram-square']"
+                size="2x"
+              />
+            </a>
+            <!-- Youtube -->
+            <a
+              class="fa-container btn-primary youtube outube--color mr-1.5"
+              href="https://www.facebook.com/shoppingauto"
+            >
+              <font-awesome-icon
+                color="#00f3c3"
+                :icon="['fab', 'youtube']"
+                size="2x"
+              />
             </a>
           </nav>
         </div>
       </div>
     </div>
     <!-- Le crezdit dernier -->
-    <div>
-      <div>
-        <p>
-          <span></span>
+    <div id="footer-copyright" class="py-0">
+      <div
+        class="
+          w-10/12
+          text-center
+          mx-auto
+          md:w-full
+          flex flex-col
+          md:flex-row
+          justify-center
+        "
+      >
+        <p
+          class="
+            text-gray-600 text-xs
+            my-auto
+            mx-auto
+            mb-2
+            md:mb-0 md:ml-0 md:mr-3
+            flex
+          "
+        >
+          <span class="my-auto mr-1">
+            shoppingauto.fr utilise la technologie</span
+          >
           <a href="">
             <!-- Logo eveho -->
-            <svg>
-              <path></path>
-            </svg>
+            <img
+              class="object-contain h-5 w-full"
+              src="~/assets/images/logo/Eveho.PNG"
+              alt="Eveho logo"
+            />
           </a>
         </p>
         <!-- Mention legale -->
-        <p>
+        <p class="text-gray-600 text-2xs mt-auto">
+          © 2021 shoppingauto.fr —
           <!-- shopping auto.fr -->
-          <a href="">
+          <a href="/mentions-legales" class="text-2xs">
             <!-- mention legale -->
+            Mentions
           </a>
           <span>
-            <!-- et -->
-            <span>cgs</span>
+            et
+            <a href="/conditions-generales-servicess"> cgs</a>
           </span>
         </p>
       </div>
@@ -112,6 +164,29 @@ footer {
     .btn-primary {
       opacity: 1;
     }
+    .facebook {
+      .facebook--color {
+        color: $facebook-color;
+      }
+    }
+    .instagram {
+      .instagram--color {
+        color: $instagram-color;
+      }
+    }
+    .youtube {
+      .youtube--color {
+        color: $youtube-color;
+      }
+    }
+  }
+  .footer-copyright {
+    opacity: 1;
+    color: #975656;
+    padding-bottom: 3rem;
+  }
+  .text-2xs {
+    font-size: 0.6rem;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <!-- navbar-black -->
-  <header class="h-16 fixed w-full z-50 top-0 navbar-black">
+  <header class="h-16 fixed w-full z-50 top-0">
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
       <!-- Il faut changer a à nuxt-link router -->
@@ -79,6 +79,9 @@ export default {}
       width: 91.666667%;
       margin: auto;
     }
+  }
+  .hamburger--color {
+    color: #00f3c3;
   }
 }
 </style>
