@@ -18,9 +18,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~assets/base/global.scss'],
+  css: [
+    '~assets/base/global.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css',
+  ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/aos.client', '@/plugins/hamburgers'],
+  plugins: [
+    '@/plugins/aos.client',
+    '@/plugins/hamburgers',
+    '@/plugins/fontawesome.js',
+  ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

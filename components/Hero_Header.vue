@@ -19,7 +19,10 @@
               "
             >
               <a class="text-sm text-white flex nuxt-link-active" href="/">
-                <p>o</p>
+                <font-awesome-icon
+                  icon="['fas', 'fa-chevron-left']"
+                  style="font-size: 22px"
+                />
                 Retourner à l'accueil
               </a>
               <h1 class="text-sm text-2xl font-bold md:text-3x1">FAQ</h1>
