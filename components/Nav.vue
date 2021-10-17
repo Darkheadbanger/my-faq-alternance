@@ -16,29 +16,33 @@
         <!-- Hamburger à faire, hamburger--spring is--active -->
         <button class="hamburger hamburger--spring" type="button">
           <span class="hamburger-box">
-            <!-- hamburger box -->
-            <span class="hamburger-inner"><!--Hamberger inner--></span>
+            <span class="hamburger-inner"></span>
           </span>
         </button>
       </div>
       <!-- Pour le menu nav animation -->
-      <nav>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+      <nav class="absolute top-0 left-0 right-0 bottom-0 flex md:block menu">
+        <ul class="navbar-menu">
+          <!-- container dropdown 5X -->
+          <li class="container-dropdown">
+            <a href="/voitures occasion">
+              <img
+                src="h-5 md:3 inline mr-2 my-auto"
+                alt="~/assets/images/menu/voiture.png"
+              />
+            </a>
+          </li>
+          <!-- Pour ma liste -->
           <!-- Ma liste -->
           <li>
-            <div>
-              <a href="">
+            <div class="border border-primary py-1 px-2 rounded-full">
+              <a href="~/assets/images/menu/heart.png">
                 <!-- Symbol coeur -->
                 <svg>
                   <path></path>
                 </svg>
-                <span></span>
-                <span></span>
+                <span class="my-auto text-xs mr-1">(0)</span>
+                <span>Ma liste</span>
               </a>
             </div>
           </li>
@@ -57,18 +61,20 @@ export default {}
   margin-left: auto;
   margin-right: auto;
   width: 91.666667%;
-}
-.hamburger {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: absolute;
-  z-index: 1;
-  // outline: 2px solid transparent;
-  // outline-offset: 2px;
-  // position: relative;
-  // z-index: 10;
-  // padding: 15;
+
+  .menu {
+    background-color: rgba(255, 255, 255);
+    height: 100vh;
+    width: 100vw;
+    margin-left: -100vw;
+    transition: margin-left 1s;
+
+    .navbar-menu {
+      list-style-type: none;
+      padding-left: 0;
+      width: 91.666667%;
+      margin: auto;
+    }
+  }
 }
 </style>
