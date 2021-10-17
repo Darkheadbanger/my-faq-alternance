@@ -9,6 +9,7 @@
       <div id="__layout">
         <Nav />
         <Hero-Header />
+        <Footer />
       </div>
     </div>
   </body>
