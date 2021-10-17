@@ -26,7 +26,7 @@ export default {
   plugins: [
     '@/plugins/aos.client',
     '@/plugins/hamburgers',
-    '@/plugins/fontawesome.js',
+    '~/plugins/fontawesome.js',
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

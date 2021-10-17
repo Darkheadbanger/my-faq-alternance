@@ -1,6 +1,6 @@
 <template>
   <!-- navbar-black -->
-  <header class="h-16 fixed w-full z-50 top-0">
+  <header class="h-16 fixed w-full z-50 top-0 navbar-black">
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
       <!-- Il faut changer a à nuxt-link router -->
@@ -57,6 +57,10 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+.navbar-black {
+  opacity: 1;
+  background-color: #fff;
+}
 .container-raw {
   margin-left: auto;
   margin-right: auto;

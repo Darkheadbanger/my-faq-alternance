@@ -1,6 +1,6 @@
 <template>
   <!-- Main englobe depuis toute en haut même le nav jusqu'à avant footer -->
-  <main class="pt-16">
+  <main class="pt-0">
     <div>
       <!-- page header avec photo voiture -->
       <div class="relative page-header">
@@ -19,10 +19,7 @@
               "
             >
               <a class="text-sm text-white flex nuxt-link-active" href="/">
-                <font-awesome-icon
-                  icon="['fas', 'fa-chevron-left']"
-                  style="font-size: 22px"
-                />
+                <FontAwesomeIcon :icon="['fab', 'codepen']" title="Codepen" />
                 Retourner à l'accueil
               </a>
               <h1 class="text-sm text-2xl font-bold md:text-3x1">FAQ</h1>
