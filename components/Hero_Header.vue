@@ -34,6 +34,7 @@
       <!-- Grand espace, pour ecrire la section centre, 5X -->
       <div class="relative bg-white faq">
         <section id="faq" class="text-black my-12 md:my container">
+          <!-- bg-ray f-9 on change -->
           <div
             class="
               mb-5

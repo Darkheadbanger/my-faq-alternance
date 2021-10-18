@@ -19,7 +19,6 @@
             <span class="hamburger-inner"></span>
           </span>
         </button>
-        <p></p>
       </div>
       <!-- Pour le menu nav animation -->
       <nav class="absolute top-0 left-0 right-0 bottom-0 flex md:block menu">
