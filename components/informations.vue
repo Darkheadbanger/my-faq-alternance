@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="container relative bg-white faq">
-      <section id="faq" class="text-black my-12 md:my container">
+    <div class="relative bg-white faq flex flex-wrap content-center">
+      <section id="faq" class="text-black mt-10 md:my container mx-52">
         <!-- bg-ray f-9 on change -->
         <div
           class="
@@ -12,7 +12,7 @@
             md:px-10
             transition-colors
             duration-300
-            bg-gray-f6
+            bg-gray-100
           "
         >
           <p
@@ -78,3 +78,11 @@ export default {
   props: ['cardsinfo'],
 }
 </script>
+
+<style lang="scss" scoped>
+section {
+  .container {
+    max-width: 1295px;
+  }
+}
+</style>
