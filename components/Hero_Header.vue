@@ -19,7 +19,7 @@
                 text-white
               "
             >
-              <a class="text-sm text-white flex nuxt-link-active" href="/">
+              <NuxtLink to="/" class="text-sm text-white flex nuxt-link-active">
                 <font-awesome-icon
                   :icon="['fas', 'chevron-left']"
                   size="xs"
