@@ -2,98 +2,107 @@
   <!-- footer qui englobe tout -->
   <footer>
     <!-- Pour organiser -->
-    <div class="container flex flex-col py-1 md:py-6">
-      <!-- container footer -->
-      <div class="flex-col">
-        <!-- logo shopping auto -->
-        <div class="container-logo">
-          <a class="footer-logo block nuxt-link-active" href="">
-            <img
-              class="lazyloaded object-contain"
-              data-src="~/assets/images/logo/logo-footer.svg"
-              alt="Logo"
-              src="~/assets/images/logo/logo-footer.svg"
-            />
-          </a>
-        </div>
-        <!-- container navigation -->
-        <div class="mt-6">
-          <!-- Navigation -->
-          <p class="font-bold">Navigation</p>
-          <!-- list de nav -->
-          <nav class="flex flex-wrap flex-row">
-            <!-- 10X -->
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/voitures-occasion" class=""> Nos voitures </a>
-            </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/garanties-shoppingauto" class=""> Nos garanties </a>
-            </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/qui-sommes-nous" class=""> Qui sommes-nous ? </a>
-            </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="faq" class=""> FAQ </a>
-            </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/mentions-legales" class=""> Mentions légales </a>
-            </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/conditions-generales-services" class="">
-                Conditions générales de services
+    <div class="container flex-col md:flex py-4 md:py-6">
+      <div class="container md:flex md:py-6">
+        <!-- container footer -->
+        <div class="flex-col">
+          <div class="md:flex">
+            <!-- logo shopping auto -->
+            <div class="container-logo">
+              <a class="footer-logo block nuxt-link-active" href="">
+                <img
+                  class="lazyloaded object-contain"
+                  data-src="~/assets/images/logo/logo-footer.svg"
+                  alt="Logo"
+                  src="~/assets/images/logo/logo-footer.svg"
+                />
               </a>
             </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/actualites" class=""> Actualités </a>
+            <!-- container navigation -->
+            <div class="mt-6">
+              <!-- Navigation -->
+              <p class="font-bold">Navigation</p>
+              <!-- list de nav -->
+              <nav class="flex flex-wrap flex-row">
+                <!-- 10X -->
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/voitures-occasion" class=""> Nos voitures </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/garanties-shoppingauto" class=""> Nos garanties </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/qui-sommes-nous" class=""> Qui sommes-nous ? </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="faq" class=""> FAQ </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/mentions-legales" class=""> Mentions légales </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/conditions-generales-services" class="">
+                    Conditions générales de services
+                  </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/actualites" class=""> Actualités </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/contact" class=""> Contact </a>
+                </div>
+                <div class="w-1/2 mt-3 text-xs">
+                  <a href="/connexion" class=""> Me connecter </a>
+                </div>
+              </nav>
             </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/contact" class=""> Contact </a>
+            <!-- container rs -->
+            <div class="text-left flex-col space-between mt-8">
+              <p>Suivez-nous</p>
+              <!-- reseaux sociaux -->
+              <nav class="flex justify-end mb-auto">
+                <!-- a 3X -->
+                <!-- facebook -->
+                <a
+                  class="fa-container btn-primary"
+                  href="https://www.facebook.com/shoppingauto"
+                >
+                  <font-awesome-icon
+                    color="#00f3c3"
+                    :icon="['fab', 'facebook']"
+                    size="2x"
+                  />
+                </a>
+                <!-- Instagram -->
+                <a
+                  class="
+                    fa-container
+                    btn-primary
+                    instagram instagram--color
+                    ml-0.5
+                  "
+                  href="https://www.facebook.com/shoppingauto"
+                >
+                  <font-awesome-icon
+                    color="#00f3c3"
+                    :icon="['fab', 'instagram-square']"
+                    size="2x"
+                  />
+                </a>
+                <!-- Youtube -->
+                <a
+                  class="fa-container btn-primary youtube outube--color mr-1.5"
+                  href="https://www.facebook.com/shoppingauto"
+                >
+                  <font-awesome-icon
+                    color="#00f3c3"
+                    :icon="['fab', 'youtube']"
+                    size="2x"
+                  />
+                </a>
+              </nav>
             </div>
-            <div class="w-1/2 mt-3 text-xs">
-              <a href="/connexion" class=""> Me connecter </a>
-            </div>
-          </nav>
-        </div>
-        <!-- container rs -->
-        <div class="text-left flex-col space-between mt-8">
-          <p>Suivez-nous</p>
-          <!-- reseaux sociaux -->
-          <nav class="flex justify-end mb-auto">
-            <!-- a 3X -->
-            <!-- facebook -->
-            <a
-              class="fa-container btn-primary"
-              href="https://www.facebook.com/shoppingauto"
-            >
-              <font-awesome-icon
-                color="#00f3c3"
-                :icon="['fab', 'facebook']"
-                size="2x"
-              />
-            </a>
-            <!-- Instagram -->
-            <a
-              class="fa-container btn-primary instagram instagram--color ml-0.5"
-              href="https://www.facebook.com/shoppingauto"
-            >
-              <font-awesome-icon
-                color="#00f3c3"
-                :icon="['fab', 'instagram-square']"
-                size="2x"
-              />
-            </a>
-            <!-- Youtube -->
-            <a
-              class="fa-container btn-primary youtube outube--color mr-1.5"
-              href="https://www.facebook.com/shoppingauto"
-            >
-              <font-awesome-icon
-                color="#00f3c3"
-                :icon="['fab', 'youtube']"
-                size="2x"
-              />
-            </a>
-          </nav>
+          </div>
         </div>
       </div>
     </div>
