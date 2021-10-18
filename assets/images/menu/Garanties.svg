@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13px" height="14px" viewBox="0 0 13 14">
+  <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+  <title>Stroke 1</title>
+  <desc>Created with Sketch.</desc>
+  <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="ABOUT" transform="translate(-818.000000, -31.000000)" stroke="#00CCA4">
+      <g id="NAVBAR">
+        <g id="GARANTIES" transform="translate(819.000000, 29.000000)">
+          <g id="Group-5" transform="translate(0.000000, 3.000000)">
+            <path d="M5.4,0 L0,0 L0,2.24677647 C0,5.32921625 1.33821183,8.25672953 3.66124058,10.2562601 L5.4,11.7529412 L7.13878887,10.2562601 C9.46181763,8.25672953 10.8,5.32921625 10.8,2.24677647 L10.8,0 L5.4,0 Z" id="Stroke-1"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
