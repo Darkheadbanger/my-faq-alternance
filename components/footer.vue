@@ -26,6 +26,32 @@
             <div class="w-1/2 mt-3 text-xs">
               <a href="/voitures-occasion" class=""> Nos voitures </a>
             </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/garanties-shoppingauto" class=""> Nos garanties </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/qui-sommes-nous" class=""> Qui sommes-nous ? </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="faq" class=""> FAQ </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/mentions-legales" class=""> Mentions légales </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/conditions-generales-services" class="">
+                Conditions générales de services
+              </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/actualites" class=""> Actualités </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/contact" class=""> Contact </a>
+            </div>
+            <div class="w-1/2 mt-3 text-xs">
+              <a href="/connexion" class=""> Me connecter </a>
+            </div>
           </nav>
         </div>
         <!-- container rs -->

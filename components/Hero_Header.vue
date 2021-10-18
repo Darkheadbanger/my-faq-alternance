@@ -79,6 +79,27 @@
               </div>
             </div>
             <!-- Ici deuxième -->
+            <div class="flex mb-4 md:mr-24 last:mr-0">
+              <div class="mr-6 my-auto">
+                <img
+                  class="w-16"
+                  src="~/assets/images/contact/CHAT.svg"
+                  alt="Hotline"
+                />
+                <button class="hidden md:block">
+                  <img
+                    src="https://admin.shoppingauto.fr/storage/uploads/2020/12/15/5fd88680e42195d7fae39ec200PICTO_Hotline.svg"
+                    class="w-16"
+                  />
+                </button>
+              </div>
+              <div class="my-auto flex-1">
+                <p class="text-base md:text-xl font-semibold">Chat en ligne</p>
+                <div class="text-sm">
+                  <p>7 jours sur 7, de 6h à minuit</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
