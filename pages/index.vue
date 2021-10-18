@@ -8,7 +8,11 @@
     <div id="__nuxt">
       <div id="__layout">
         <Nav />
-        <Hero-Header />
+        <Hero-Header
+          v-for="cardInfo in cardInformations"
+          :key="cardInfo.id"
+          :cardsinfo="cardInfo"
+        />
         <Footer />
       </div>
     </div>
@@ -16,5 +20,12 @@
 </template> 
 
 <script>
-export default {}
+import { cardInformation } from '@/assets/data.js'
+export default {
+  data() {
+    return {
+      cardInformations: cardInformation,
+    }
+  },
+}
 </script>

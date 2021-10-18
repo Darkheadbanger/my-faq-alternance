@@ -1,4 +1,4 @@
-export const information = [
+export const cardInformation = [
   {
     id: 1,
     title: 'shoppingauto.fr, comment ça marche ?',

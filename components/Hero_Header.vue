@@ -1,3 +1,4 @@
+/* eslint-disable vue/prop-name-casing */
 <template>
   <!-- Main englobe depuis toute en haut même le nav jusqu'à avant footer -->
   <main class="pt-0">
@@ -60,7 +61,7 @@
               "
             >
               <span class="my-auto">
-                shoppingauto.fr, comment ça marche ?
+                {{ cardsinfo.title }}
               </span>
               <!-- fontawesome -rotate-180 quans s'ouvre -->
               <span class="my-auto"
@@ -90,13 +91,10 @@
                 paragraph
               "
             >
-              <p class="font-medium mb-1">La réponse de shoppingauto.fr :</p>
+              <p class="font-medium mb-1">{{ cardsinfo.reponse.reponse }}</p>
               <div>
                 <p>
-                  Acheter une auto n'aura jamais été aussi facile. Cherchez,
-                  comparez et réservez ! Dès réception de votre réservation, on
-                  se charge de finaliser votre commande à vos côtés et à 100% en
-                  digital ! 😊
+                  {{ cardsinfo.reponse.informations.infos }}
                 </p>
               </div>
             </div>
@@ -152,7 +150,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  // eslint-disable-next-line vue/prop-name-casing
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['cardsinfo'],
+}
 </script>
 
 <style lang="scss" scoped>
