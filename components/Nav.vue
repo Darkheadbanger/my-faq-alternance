@@ -3,8 +3,8 @@
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ change_nav_color: scrollPosition > 0 }"
-    @scroll="beforeScroll"
+    :class="{ scrollColor: scrollPosition > 0 }"
+    v-on:scroll="beforeScroll"
   >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
@@ -241,8 +241,8 @@ export default {
   .heart-color {
     color: $eveho_color;
   }
-  .change_nav_color {
-    background-color: $background_color;
-  }
+}
+.scrollColor {
+  background-color: $background_color;
 }
 </style>
