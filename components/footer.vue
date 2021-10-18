@@ -156,6 +156,7 @@ export default {}
 
 <style lang="scss" scoped>
 footer {
+  background-color: rgba(246, 246, 246);
   opacity: 1;
   .container {
     margin-left: auto;
