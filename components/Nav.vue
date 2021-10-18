@@ -1,25 +1,35 @@
 <template>
   <!-- navbar-black -->
+  <!-- Change color on scroll dosen't work -->
+  <!-- Hamburger dosen't work, i tried -->
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ scrollColor: scrollPosition > 0 }"
-    v-on:scroll="beforeScroll"
+    :class="{ [`bg-white`]: scrollPosition > 0 }"
+    @scroll="beforeScroll"
   >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
       <!-- Il faut changer a à nuxt-link router -->
-      <a class="z-10 my-auto flex h-6 header-logo nuxt_link_active" href="/">
+      <NuxtLink
+        to="/"
+        class="z-10 my-auto flex h-6 header-logo nuxt_link_active"
+      >
         <img
           class="h-full my-auto"
           src="~/assets/images/logo-white.PNG"
           alt="Logo"
         />
-      </a>
+      </NuxtLink>
       <!-- Pour le humberger -->
       <div class="my-auto md:hidden">
         <!-- Hamburger à faire, hamburger--spring is--active -->
-        <button class="hamburger hamburger--spring" type="button">
+        <button
+          :class="{ [`is-active`]: navOpen }"
+          class="hamburger hamburger--spring"
+          type="button"
+          @click="navOpen = !navOpen"
+        >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
@@ -67,7 +77,7 @@
 
             <li>
               <div class="container-dropdown text-white text-xs mx-4">
-                <a href="/garanties-shoppingauto">
+                <NuxtLink to="/garanties-shoppingauto">
                   <!-- Symbol coeur -->
                   <img
                     class="h-5 md:3 inline mr-2 my-auto"
@@ -75,7 +85,7 @@
                     alt="Garanties"
                   />
                   Nos garanties
-                </a>
+                </NuxtLink>
               </div>
             </li>
 
@@ -95,9 +105,9 @@
 
             <li>
               <div class="container-dropdown text-white text-xs mx-4">
-                <a
+                <NuxtLink
+                  to="/garanties-shoppingauto"
                   class="nuxt-link-exact-active nuxt-link-active"
-                  href="/garanties-shoppingauto"
                 >
                   <!-- Symbol coeur -->
                   <img
@@ -106,7 +116,7 @@
                     alt="FAQ"
                   />
                   FAQ
-                </a>
+                </NuxtLink>
               </div>
             </li>
 
@@ -136,7 +146,7 @@
                   border-green-300
                 "
               >
-                <a href="/mon-compte/wishlist" class="heart-color">
+                <NuxtLink to="/mon-compte/wishlist" class="heart-color">
                   <!-- Symbol coeur -->
                   <svg
                     aria-hidden="true"
@@ -163,7 +173,7 @@
                   </svg>
                   <span class="my-auto text-xs mr-1"> (0) </span>
                   <span class="text-white"> Ma liste </span>
-                </a>
+                </NuxtLink>
               </div>
             </li>
           </ul>
@@ -180,6 +190,7 @@ export default {
     return {
       view: {
         scrollPosition: 0,
+        navOpen: true,
       },
     }
   },

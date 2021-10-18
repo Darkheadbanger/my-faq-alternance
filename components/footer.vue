@@ -26,33 +26,41 @@
               <nav class="flex flex-wrap flex-row">
                 <!-- 10X -->
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/voitures-occasion" class=""> Nos voitures </a>
+                  <NuxtLink to="/voitures-occasion" class="">
+                    Nos voitures
+                  </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/garanties-shoppingauto" class=""> Nos garanties </a>
+                  <NuxtLink to="/garanties-shoppingauto" class="">
+                    Nos garanties
+                  </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/qui-sommes-nous" class=""> Qui sommes-nous ? </a>
+                  <NuxtLink to="/qui-sommes-nous" class="">
+                    Qui sommes-nous ?
+                  </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="faq" class=""> FAQ </a>
+                  <NuxtLink to="faq" class=""> FAQ </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/mentions-legales" class=""> Mentions légales </a>
+                  <NuxtLink to="/mentions-legales" class="">
+                    Mentions légales
+                  </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/conditions-generales-services" class="">
+                  <NuxtLink to="/conditions-generales-services" class="">
                     Conditions générales de services
-                  </a>
+                  </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/actualites" class=""> Actualités </a>
+                  <NuxtLink to="/actualites" class=""> Actualités </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/contact" class=""> Contact </a>
+                  <NuxtLink to="/contact" class=""> Contact </NuxtLink>
                 </div>
                 <div class="w-1/2 mt-3 text-xs">
-                  <a href="/connexion" class=""> Me connecter </a>
+                  <NuxtLink to="/connexion" class=""> Me connecter </NuxtLink>
                 </div>
               </nav>
             </div>
@@ -132,7 +140,7 @@
           <span class="my-auto mr-1">
             shoppingauto.fr utilise la technologie</span
           >
-          <a href="">
+          <a href="https://eveho.io/">
             <!-- Logo eveho -->
             <img
               class="object-contain h-5 w-full"
@@ -145,13 +153,13 @@
         <p class="text-gray-600 text-2xs mt-auto">
           © 2021 shoppingauto.fr —
           <!-- shopping auto.fr -->
-          <a href="/mentions-legales" class="text-2xs">
+          <NuxtLink to="/mentions-legales" class="text-2xs">
             <!-- mention legale -->
             Mentions
-          </a>
+          </NuxtLink>
           <span>
             et
-            <a href="/conditions-generales-servicess"> cgs</a>
+            <NuxtLink to="/conditions-generales-servicess"> cgs</NuxtLink>
           </span>
         </p>
       </div>

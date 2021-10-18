@@ -26,7 +26,7 @@
                   class="mt-1 mr-2"
                 />
                 Retourner à l'accueil
-              </a>
+              </NuxtLink>
               <h1 class="text-sm text-2xl font-bold md:text-3x1">FAQ</h1>
             </div>
           </div>

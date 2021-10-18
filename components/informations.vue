@@ -14,7 +14,21 @@
             duration-300
             bg-gray-100
           "
+          :class="{
+            [`mb-5
+            py-4
+            md:py-8
+            px-5
+            md:px-10
+            transition-colors
+            duration-300
+            bg-gray-200
+`]: infoOpen,
+          }"
+          type="button"
+          @click="infoOpen = !infoOpen"
         >
+          >
           <p
             class="
               md:text-xl
@@ -24,27 +38,52 @@
               cursor-pointer
               transition-all
               duration-300
-              mb-6
             "
+            :class="{
+              [`md:text-xl
+              font-semibold
+              flex
+              justify-between
+              cursor-pointer
+              transition-all
+              duration-300
+ mb-6`]: infoOpen,
+            }"
           >
             <span class="my-auto">
               {{ cardsinfo.title }}
             </span>
             <!-- fontawesome -rotate-180 quans s'ouvre -->
-            <span class="my-auto"
-              ><font-awesome-icon
-                class="
-                  text-gray-400
-                  transform
-                  transition
-                  duration-300
-                  w-6
-                  text-gray-a6
-                  stroke-current
-                "
-                size="2x"
-                :icon="['fas', 'chevron-up']"
-            /></span>
+            <span class="my-auto">
+              <button
+                :class="{
+                  [`                    text-gray-400
+                    transform
+                    transition
+                    duration-300
+                    w-6
+                    text-gray-a6
+                    stroke-current
+-rotate-180`]: infoOpen,
+                }"
+                type="button"
+                @click="infoOpen = !infoOpen"
+              >
+                <font-awesome-icon
+                  class="
+                    text-gray-400
+                    transform
+                    transition
+                    duration-300
+                    w-6
+                    text-gray-a6
+                    stroke-current
+                  "
+                  size="2x"
+                  :icon="['fas', 'chevron-up']"
+                />
+              </button>
+            </span>
           </p>
           <!-- Pour écrire l'explication -->
           <div
@@ -76,6 +115,13 @@ export default {
   // eslint-disable-next-line vue/prop-name-casing
   // eslint-disable-next-line vue/require-prop-types
   props: ['cardsinfo'],
+  data() {
+    return {
+      view: {
+        infoOpen: true,
+      },
+    }
+  },
 }
 </script>
 
