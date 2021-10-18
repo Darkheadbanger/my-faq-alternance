@@ -25,6 +25,7 @@ export const cardInformation = [
       },
     },
   },
+
   {
     id: 3,
     title: 'Comment savoir combien coutera ma livraison ?',
