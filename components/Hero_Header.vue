@@ -86,12 +86,6 @@
                   src="~/assets/images/contact/CHAT.svg"
                   alt="Hotline"
                 />
-                <button class="hidden md:block">
-                  <img
-                    src="https://admin.shoppingauto.fr/storage/uploads/2020/12/15/5fd88680e42195d7fae39ec200PICTO_Hotline.svg"
-                    class="w-16"
-                  />
-                </button>
               </div>
               <div class="my-auto flex-1">
                 <p class="text-base md:text-xl font-semibold">Chat en ligne</p>
