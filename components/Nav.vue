@@ -1,6 +1,11 @@
 <template>
   <!-- navbar-black -->
-  <header class="h-16 fixed w-full z-50 top-0">
+  <header
+    id="navbar"
+    class="h-16 fixed w-full z-50 top-0"
+    :class="{ change_color: scrollPosition > 0 }"
+    @scroll="beforeScroll"
+  >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
       <!-- Il faut changer a à nuxt-link router -->
@@ -169,7 +174,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  el: '#navbar',
+  data() {
+    return {
+      view: {
+        scrollPosition: 0,
+      },
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.updateScroll)
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -215,6 +240,9 @@ export default {}
   }
   .heart-color {
     color: rgb(0, 204, 164);
+  }
+  .change_color {
+    background-color: white;
   }
 }
 </style>
