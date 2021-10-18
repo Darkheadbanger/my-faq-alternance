@@ -3,7 +3,7 @@
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ change_color: scrollPosition > 0 }"
+    :class="{ change_nav_color: scrollPosition > 0 }"
     @scroll="beforeScroll"
   >
     <div class="container-raw flex justify-between h-full">
@@ -200,7 +200,7 @@ export default {
 <style lang="scss" scoped>
 .navbar-black {
   opacity: 1;
-  background-color: #fff;
+  background-color: $background_color;
 }
 .container-raw {
   margin-left: auto;
@@ -208,13 +208,13 @@ export default {
   width: 91.666667%;
 
   .menu {
-    background-color: rgba(255, 255, 255);
+    background-color: $background_color;
     height: 100vh;
     width: 100vw;
     margin-left: -100vw;
     transition: margin-left 1s;
     .menu-big {
-      background-color: rgba(255, 255, 255);
+      background-color: $background_color;
       height: 100vh;
       width: 100vw;
       margin-left: -100vw;
@@ -236,13 +236,13 @@ export default {
     }
   }
   .hamburger--color {
-    color: #00f3c3;
+    color: $eveho_color;
   }
   .heart-color {
-    color: rgb(0, 204, 164);
+    color: $eveho_color;
   }
-  .change_color {
-    background-color: white;
+  .change_nav_color {
+    background-color: $background_color;
   }
 }
 </style>
