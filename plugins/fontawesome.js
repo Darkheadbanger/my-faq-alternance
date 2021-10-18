@@ -6,6 +6,7 @@ import {
   fas,
   faChevronLeft,
   faChevronUp,
+  faPhone,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
@@ -25,7 +26,8 @@ library.add(
   faFacebook,
   fas,
   faInstagramSquare,
-  faYoutube
+  faYoutube,
+  faPhone
 )
 
 // Register the component globally

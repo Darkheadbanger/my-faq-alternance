@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="relative bg-white faq flex flex-wrap content-center">
-      <section id="faq" class="text-black mt-10 md:my container mx-52">
+      <section id="faq" class="text-black mt-10 md:my container mx-24">
         <!-- bg-ray f-9 on change -->
         <div
           class="

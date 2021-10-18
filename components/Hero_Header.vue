@@ -39,7 +39,7 @@
         :cardsinfo="cardInfo"
       />
       <!-- En bas, pour la "vous n'avez pas de réponse -->
-      <div class="relative bg-white custom_contact_us px-10">
+      <div class="relative bg-white custom_contact_us px-10 container mx-16">
         <section
           id="custom-contact-us"
           class="text-black my-12 md:my-24 container"
