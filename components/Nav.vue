@@ -19,7 +19,11 @@
       >
         <img
           class="h-full my-auto"
-          src="~/assets/images/logo-white.PNG"
+          :src="
+            view.beforeScroll
+              ? require(`~/assets/images/logo/logo-white.svg`)
+              : require(`~/assets/images/logo/logo-color.svg`)
+          "
           alt="Logo"
         />
       </NuxtLink>
