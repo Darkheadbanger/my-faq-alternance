@@ -2,11 +2,13 @@
   <!-- navbar-black -->
   <!-- Change color on scroll dosen't work -->
   <!-- Hamburger dosen't work, i tried -->
+  <!-- :class="{ `bg-white`: scrollPosition > 0 }" -->
+  <!-- @scroll="handleScroll" -->
+
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ [`h-16 fixed w-full z-50 top-0 bg-white`]: scrollPosition > 0 }"
-    @scroll="beforeScroll"
+    :class="{ 'bg-white': !view.handleScroll }"
   >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
@@ -189,23 +191,25 @@ export default {
   data() {
     return {
       view: {
-        scrollPosition: 0,
+        beforeScroll: true,
         navOpen: true,
       },
     }
   },
   methods: {
-    beforeScroll() {
-      // this.scrollPosition = window.scrollY
-      // eslint-disable-next-line no-console
-      console.log(window.scrollY, window.scrollX)
+    handleScroll() {
+      if (window.pageYOffset > '0' || this.view.beforeScroll) {
+        this.view.beforeScroll = false
+      } else {
+        this.view.beforeScroll = true
+      }
     },
   },
   beforeMounted() {
-    window.addEventListener('scroll', this.beforeScroll)
+    window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroyed() {
-    window.removeEventListener('scroll', this.beforeScroll)
+    window.removeEventListener('scroll', this.handleScroll)
   },
 }
 </script>
