@@ -8,7 +8,7 @@
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ 'bg-white': !view.handleScroll }"
+    :class="{ 'bg-white': !view.beforeScroll }"
   >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
@@ -191,25 +191,26 @@ export default {
   data() {
     return {
       view: {
-        beforeScroll: true,
+        beforeScroll: 1, // true
         navOpen: true,
       },
     }
   },
-  methods: {
-    handleScroll() {
-      if (window.pageYOffset > '0' || this.view.beforeScroll) {
-        this.view.beforeScroll = false
-      } else {
-        this.view.beforeScroll = true
-      }
-    },
-  },
-  beforeMounted() {
+
+  mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
-  beforeDestroyed() {
+  destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      if (window.pageYOffset > 0) {
+        this.view.beforeScroll = 0 // false
+      } else {
+        this.view.beforeScroll = 1 // true
+      }
+    },
   },
 }
 </script>
