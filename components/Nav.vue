@@ -63,9 +63,12 @@
             mt-2.5
           "
         >
-          <ul class="navbar-menu">
+          <ul
+            class="navbar-menu text-white text-xs"
+            :class="{ 'text-gray-900': !view.beforeScroll }"
+          >
             <!-- container dropdown 5X -->
-            <li class="container-dropdown text-white text-xs mx-4">
+            <li class="container-dropdown mx-3">
               <a href="/voitures occasion">
                 <img
                   class="h-5 md:3 inline mr-2 my-auto"
@@ -77,8 +80,8 @@
             </li>
             <!-- Pour ma liste -->
 
-            <li>
-              <div class="container-dropdown text-white text-xs mx-4">
+            <li class="container-dropdown mx-3">
+              <div>
                 <NuxtLink to="/garanties-shoppingauto">
                   <!-- Symbol coeur -->
                   <img
@@ -91,8 +94,8 @@
               </div>
             </li>
 
-            <li>
-              <div class="container-dropdown text-white text-xs mx-4">
+            <li class="container-dropdown mx-3">
+              <div>
                 <a href="/qui-sommes-nous">
                   <!-- Symbol coeur -->
                   <img
@@ -105,8 +108,8 @@
               </div>
             </li>
 
-            <li>
-              <div class="container-dropdown text-white text-xs mx-4">
+            <li class="container-dropdown mx-3">
+              <div>
                 <NuxtLink
                   to="/garanties-shoppingauto"
                   class="nuxt-link-exact-active nuxt-link-active"
@@ -122,8 +125,8 @@
               </div>
             </li>
 
-            <li>
-              <div class="container-dropdown text-white text-xs mx-4">
+            <li class="container-dropdown mx-3">
+              <div>
                 <a href="/garanties-shoppingauto">
                   <img
                     class="h-5 md:3 inline mr-2 my-auto"
@@ -136,15 +139,13 @@
             </li>
 
             <!-- Ma liste -->
-            <li>
+            <li class="container-dropdown mx-3">
               <div
                 class="
                   border border-primary
                   py-1
                   px-2
                   rounded-full
-                  text-xs
-                  mx-4
                   border-green-300
                 "
               >
@@ -173,8 +174,18 @@
                       class=""
                     ></path>
                   </svg>
-                  <span class="my-auto text-xs mr-1"> (0) </span>
-                  <span class="text-white"> Ma liste </span>
+                  <span
+                    class="my-auto text-xs mr-1 text-white"
+                    :class="{ 'text-gray-900': !view.beforeScroll }"
+                  >
+                    (0)
+                  </span>
+                  <span
+                    class="text-white"
+                    :class="{ 'text-gray-900': !view.beforeScroll }"
+                  >
+                    Ma liste
+                  </span>
                 </NuxtLink>
               </div>
             </li>
