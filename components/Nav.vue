@@ -5,7 +5,7 @@
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ [`bg-white`]: scrollPosition > 0 }"
+    :class="{ [`h-16 fixed w-full z-50 top-0 bg-white`]: scrollPosition > 0 }"
     @scroll="beforeScroll"
   >
     <div class="container-raw flex justify-between h-full">
@@ -185,7 +185,7 @@
 
 <script>
 export default {
-  el: '#navbar',
+  name: 'Nav',
   data() {
     return {
       view: {
@@ -194,16 +194,18 @@ export default {
       },
     }
   },
-  mounted() {
-    window.addEventListener('scroll', this.updateScroll)
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.updateScroll)
-  },
   methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY
+    beforeScroll() {
+      // this.scrollPosition = window.scrollY
+      // eslint-disable-next-line no-console
+      console.log(window.scrollY, window.scrollX)
     },
+  },
+  beforeMounted() {
+    window.addEventListener('scroll', this.beforeScroll)
+  },
+  beforeDestroyed() {
+    window.removeEventListener('scroll', this.beforeScroll)
   },
 }
 </script>

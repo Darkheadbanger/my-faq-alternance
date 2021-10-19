@@ -28,7 +28,6 @@
           type="button"
           @click="infoOpen = !infoOpen"
         >
-          >
           <p
             class="
               md:text-xl
@@ -57,7 +56,7 @@
             <span class="my-auto">
               <button
                 :class="{
-                  [`                    text-gray-400
+                  [`text-gray-400
                     transform
                     transition
                     duration-300
