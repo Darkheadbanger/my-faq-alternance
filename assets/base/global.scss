@@ -9,9 +9,9 @@
 html {
   font-family: 'EuclidSquare', sans-serif;
   background-color: $background_color;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
   border: 0 solid $border_logo;
-  overflow-x: hidden;
 }

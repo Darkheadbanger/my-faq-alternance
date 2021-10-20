@@ -7,6 +7,7 @@
   <!--  I don't use <nuxt-link> </nuxt-link> because i use external link to simulate the link on your site because The NuxtLink component is used to navigate only to other pages inside your same application.-->
   <body
     id="body"
+    class="body"
     data-aos-easing="ease"
     data-aos-duration="1250"
     data-aos-delay="100"
@@ -25,3 +26,7 @@
 export default {}
 </script>
 
+<style lang="sass">
+.body
+  overflow-x: hidden
+</style>

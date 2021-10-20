@@ -33,10 +33,9 @@
         <!-- view.hamburgerClick ? require(`~/assets/images/logo/logo-white.svg`) : require(`~/assets/images/logo/logo-color.svg`), -->
       </NuxtLink>
       <!-- Pour le humburger -->
-      <div class="my-auto md:hidden pr-5">
+      <div class="my-auto md:hidden">
         <!-- Hamburger à faire, hamburger--spring is--active -->
         <button
-          id="hamburgerClickId"
           class="hamburger hamburger--spring"
           type="button"
           @click="hamburgerClick"
