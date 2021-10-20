@@ -4,11 +4,15 @@
   <!-- Hamburger dosen't work, i tried -->
   <!-- :class="{ `bg-white`: scrollPosition > 0 }" -->
   <!-- @scroll="handleScroll" -->
+  <!-- 'bg-red-500': !view.hamburgerClick, -->
 
   <header
     id="navbar"
     class="h-16 fixed w-full z-50 top-0"
-    :class="{ 'bg-white': !view.beforeScroll }"
+    :class="{
+      'bg-white': !view.beforeScroll,
+    }"
+    :style="{ 'background-color': view.whiteHeader }"
   >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
@@ -26,14 +30,16 @@
           "
           alt="Logo"
         />
+        <!-- view.hamburgerClick ? require(`~/assets/images/logo/logo-white.svg`) : require(`~/assets/images/logo/logo-color.svg`), -->
       </NuxtLink>
       <!-- Pour le humburger -->
-      <div class="my-auto md:hidden">
+      <div class="my-auto md:hidden pr-5">
         <!-- Hamburger à faire, hamburger--spring is--active -->
         <button
+          id="hamburgerClickId"
           class="hamburger hamburger--spring"
           type="button"
-          @click.prevent="hamburgerClick"
+          @click="hamburgerClick"
         >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -41,18 +47,6 @@
         </button>
       </div>
       <!-- Pour le menu nav animation -->
-      <!-- <nav
-        class="
-          absolute
-          top-0
-          left-0
-          right-0
-          bottom-0
-          flex
-          md:relative md:block md:invisible
-          menu
-        "
-      > -->
       <nav
         class="
           absolute
@@ -205,7 +199,8 @@ export default {
       view: {
         beforeScroll: 1, // true
         hamburgerClick: true,
-        navOpen: 1, // true
+        // navOpen: 1, // true
+        whiteHeader: '',
       },
     }
   },
@@ -213,10 +208,12 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('click', this.hamburgerClick)
+    // window.addEventListener('change', this.navOpen)
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('click', this.hamburgerClick)
+    // window.removeEventListener('change', this.navOpen)
   },
   methods: {
     handleScroll() {
@@ -229,8 +226,15 @@ export default {
     hamburgerClick(e) {
       e.currentTarget.classList.toggle('is-active')
     },
-    navOpen() {
-      this.hamburgerClick = true
+    // navOpen() {
+    //   if (this.navOpen) {
+    //     this.hamburgerClick = 1
+    //   } else {
+    //     this.hamburgerClick = 0
+    //   }
+    // },
+    headerColorChange() {
+      this.whiteHeader = 'white'
     },
   },
 }
