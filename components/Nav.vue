@@ -33,7 +33,7 @@
         <button
           class="hamburger hamburger--spring"
           type="button"
-          @click="navOpen"
+          @click.prevent="hamburgerClick"
         >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -52,6 +52,7 @@
           md:relative md:block md:invisible
           menu
         "
+        :class="{ active: !navOpen }"
       >
         <nav
           class="
@@ -206,18 +207,19 @@ export default {
     return {
       view: {
         beforeScroll: 1, // true
-        navOpen: true,
+        hamburgerClick: true,
+        // navOpen: 1, // true
       },
     }
   },
 
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('click', this.navOpen)
+    window.addEventListener('click', this.hamburgerClick)
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
-    window.removeEventListener('click', this.navOpen)
+    window.removeEventListener('click', this.hamburgerClick)
   },
   methods: {
     handleScroll() {
@@ -227,9 +229,13 @@ export default {
         this.view.beforeScroll = 1 // true
       }
     },
-    navOpen(event) {
-      event.currentTarget.classList.toggle('is-active')
+    hamburgerClick(e) {
+      e.currentTarget.classList.toggle('is-active')
+      this.hamburgerClick = true
     },
+    // navOpen() {
+    //   this.hamburgerClick = true
+    // },
   },
 }
 </script>
