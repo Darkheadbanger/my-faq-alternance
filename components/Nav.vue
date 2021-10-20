@@ -27,14 +27,13 @@
           alt="Logo"
         />
       </NuxtLink>
-      <!-- Pour le humberger -->
+      <!-- Pour le humburger -->
       <div class="my-auto md:hidden">
         <!-- Hamburger à faire, hamburger--spring is--active -->
         <button
-          :class="{ [`is-active`]: navOpen }"
           class="hamburger hamburger--spring"
           type="button"
-          @click="navOpen = !navOpen"
+          @click="navOpen"
         >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -214,9 +213,11 @@ export default {
 
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('click', this.navOpen)
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('click', this.navOpen)
   },
   methods: {
     handleScroll() {
@@ -225,6 +226,9 @@ export default {
       } else {
         this.view.beforeScroll = 1 // true
       }
+    },
+    navOpen(event) {
+      event.currentTarget.classList.toggle('is-active')
     },
   },
 }
