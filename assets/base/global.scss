@@ -8,11 +8,14 @@
 
 html {
   font-family: 'EuclidSquare', sans-serif;
-  overflow-x: hidden;
-  margin: 0;
   background-color: $background_color;
 }
 * {
   box-sizing: border-box;
   border: 0 solid $border_logo;
+  // overflow-x: hidden;
+  // width: 100%;
+  // height: 100%;
+  // margin: 0;
+  // padding: 0;
 }

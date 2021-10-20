@@ -41,7 +41,7 @@
         </button>
       </div>
       <!-- Pour le menu nav animation -->
-      <nav
+      <!-- <nav
         class="
           absolute
           top-0
@@ -52,149 +52,146 @@
           md:relative md:block md:invisible
           menu
         "
-        :class="{ active: !navOpen }"
+      > -->
+      <nav
+        class="
+          absolute
+          top-0
+          left-0
+          right-0
+          bottom-0
+          invisible
+          md:visible
+          mt-2.5
+        "
       >
-        <nav
-          class="
-            absolute
-            top-0
-            left-0
-            right-0
-            bottom-0
-            flex
-            md:visible
-            justify-end
-            mt-2.5
-          "
+        <ul
+          class="navbar-menu text-white text-xs md:flex md:justify-end"
+          :class="{ 'text-gray-900': !view.beforeScroll }"
         >
-          <ul
-            class="navbar-menu text-white text-xs"
-            :class="{ 'text-gray-900': !view.beforeScroll }"
-          >
-            <!-- container dropdown 5X -->
-            <li class="container-dropdown mx-3">
-              <a href="/voitures occasion">
+          <!-- container dropdown 5X -->
+          <li class="container-dropdown mx-3">
+            <a href="/voitures occasion">
+              <img
+                class="h-5 md:3 inline mr-2 my-auto"
+                src="~/assets/images/menu/car.svg"
+                alt="Voitures"
+              />
+              Nos voitures
+            </a>
+          </li>
+          <!-- Pour ma liste -->
+
+          <li class="container-dropdown mx-3">
+            <div>
+              <NuxtLink to="/garanties-shoppingauto">
+                <!-- Symbol coeur -->
                 <img
                   class="h-5 md:3 inline mr-2 my-auto"
-                  src="~/assets/images/menu/car.svg"
-                  alt="Voitures"
+                  src="~/assets/images/menu/Garanties.svg"
+                  alt="Garanties"
                 />
-                Nos voitures
+                Nos garanties
+              </NuxtLink>
+            </div>
+          </li>
+
+          <li class="container-dropdown mx-3">
+            <div>
+              <a href="/qui-sommes-nous">
+                <!-- Symbol coeur -->
+                <img
+                  class="h-5 md:3 inline mr-2 my-auto"
+                  src="~/assets/images/menu/list.svg"
+                  alt="Qui sommes-nous ?"
+                />
+                Qui sommes-nous ?
               </a>
-            </li>
-            <!-- Pour ma liste -->
+            </div>
+          </li>
 
-            <li class="container-dropdown mx-3">
-              <div>
-                <NuxtLink to="/garanties-shoppingauto">
-                  <!-- Symbol coeur -->
-                  <img
-                    class="h-5 md:3 inline mr-2 my-auto"
-                    src="~/assets/images/menu/Garanties.svg"
-                    alt="Garanties"
-                  />
-                  Nos garanties
-                </NuxtLink>
-              </div>
-            </li>
-
-            <li class="container-dropdown mx-3">
-              <div>
-                <a href="/qui-sommes-nous">
-                  <!-- Symbol coeur -->
-                  <img
-                    class="h-5 md:3 inline mr-2 my-auto"
-                    src="~/assets/images/menu/list.svg"
-                    alt="Qui sommes-nous ?"
-                  />
-                  Qui sommes-nous ?
-                </a>
-              </div>
-            </li>
-
-            <li class="container-dropdown mx-3">
-              <div>
-                <NuxtLink
-                  to="/garanties-shoppingauto"
-                  class="nuxt-link-exact-active nuxt-link-active"
-                >
-                  <!-- Symbol coeur -->
-                  <img
-                    class="h-5 md:3 inline mr-2 my-auto"
-                    src="~/assets/images/menu/chat.svg"
-                    alt="FAQ"
-                  />
-                  FAQ
-                </NuxtLink>
-              </div>
-            </li>
-
-            <li class="container-dropdown mx-3">
-              <div>
-                <a href="/garanties-shoppingauto">
-                  <img
-                    class="h-5 md:3 inline mr-2 my-auto"
-                    src="~/assets/images/menu/person.svg"
-                    alt="Garanties"
-                  />
-                  Me connecter
-                </a>
-              </div>
-            </li>
-
-            <!-- Ma liste -->
-            <li class="container-dropdown mx-3">
-              <div
-                class="
-                  border border-primary
-                  py-1
-                  px-2
-                  rounded-full
-                  border-green-300
-                "
+          <li class="container-dropdown mx-3">
+            <div>
+              <NuxtLink
+                to="/garanties-shoppingauto"
+                class="nuxt-link-exact-active nuxt-link-active"
               >
-                <NuxtLink to="/mon-compte/wishlist" class="heart-color">
-                  <!-- Symbol coeur -->
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="far"
-                    data-icon="heart"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    class="
-                      text-sm
-                      my-auto
-                      md:mt-1
-                      text-primary
-                      svg-inline--fa
-                      fa-heart fa-w-16
-                    "
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                      class=""
-                    ></path>
-                  </svg>
-                  <span
-                    class="my-auto text-xs mr-1 text-white"
-                    :class="{ 'text-gray-900': !view.beforeScroll }"
-                  >
-                    (0)
-                  </span>
-                  <span
-                    class="text-white"
-                    :class="{ 'text-gray-900': !view.beforeScroll }"
-                  >
-                    Ma liste
-                  </span>
-                </NuxtLink>
-              </div>
-            </li>
-          </ul>
-        </nav>
+                <!-- Symbol coeur -->
+                <img
+                  class="h-5 md:3 inline mr-2 my-auto"
+                  src="~/assets/images/menu/chat.svg"
+                  alt="FAQ"
+                />
+                FAQ
+              </NuxtLink>
+            </div>
+          </li>
+
+          <li class="container-dropdown mx-3">
+            <div>
+              <a href="/garanties-shoppingauto">
+                <img
+                  class="h-5 md:3 inline mr-2 my-auto"
+                  src="~/assets/images/menu/person.svg"
+                  alt="Garanties"
+                />
+                Me connecter
+              </a>
+            </div>
+          </li>
+
+          <!-- Ma liste -->
+          <li class="container-dropdown mx-3">
+            <div
+              class="
+                border border-primary
+                py-1
+                px-2
+                rounded-full
+                border-green-300
+              "
+            >
+              <NuxtLink to="/mon-compte/wishlist" class="heart-color">
+                <!-- Symbol coeur -->
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="far"
+                  data-icon="heart"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="
+                    text-sm
+                    my-auto
+                    md:mt-1
+                    text-primary
+                    svg-inline--fa
+                    fa-heart fa-w-16
+                  "
+                >
+                  <path
+                    fill="currentColor"
+                    d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+                    class=""
+                  ></path>
+                </svg>
+                <span
+                  class="my-auto text-xs mr-1 text-white"
+                  :class="{ 'text-gray-900': !view.beforeScroll }"
+                >
+                  (0)
+                </span>
+                <span
+                  class="text-white"
+                  :class="{ 'text-gray-900': !view.beforeScroll }"
+                >
+                  Ma liste
+                </span>
+              </NuxtLink>
+            </div>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -208,7 +205,7 @@ export default {
       view: {
         beforeScroll: 1, // true
         hamburgerClick: true,
-        // navOpen: 1, // true
+        navOpen: 1, // true
       },
     }
   },
@@ -231,11 +228,10 @@ export default {
     },
     hamburgerClick(e) {
       e.currentTarget.classList.toggle('is-active')
+    },
+    navOpen() {
       this.hamburgerClick = true
     },
-    // navOpen() {
-    //   this.hamburgerClick = true
-    // },
   },
 }
 </script>
