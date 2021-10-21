@@ -5,14 +5,16 @@
   <!-- :class="{ `bg-white`: scrollPosition > 0 }" -->
   <!-- @scroll="handleScroll" -->
   <!-- 'bg-red-500': !view.hamburgerClick, -->
-
+  <!-- :style="{ 'background-color': view.whiteHeader }" -->
   <header
     id="navbar"
-    class="h-16 fixed w-full z-50 top-0"
     :class="{
       'bg-white': !view.beforeScroll,
+      '': view.beforeScroll,
+      'navbar-black': !view.whiteHeader,
+      '': view.whiteHeader,
     }"
-    :style="{ 'background-color': view.whiteHeader }"
+    class="h-16 fixed w-full z-50 top-0"
   >
     <div class="container-raw flex justify-between h-full">
       <!-- Pour le logo -->
@@ -21,10 +23,14 @@
         to="/"
         class="z-10 my-auto flex h-6 header-logo nuxt_link_active"
       >
+        <!-- &&
+                view.whiteHeader
+              ? require(`~/assets/images/logo/logo-white.svg`)
+              : require(`~/assets/images/logo/logo-color.svg`) -->
         <img
           class="h-full my-auto"
           :src="
-            view.beforeScroll
+            view.beforeScroll && view.whiteHeader
               ? require(`~/assets/images/logo/logo-white.svg`)
               : require(`~/assets/images/logo/logo-color.svg`)
           "
@@ -199,7 +205,7 @@ export default {
         beforeScroll: 1, // true
         hamburgerClick: true,
         // navOpen: 1, // true
-        whiteHeader: '',
+        whiteHeader: true,
       },
     }
   },
@@ -224,6 +230,8 @@ export default {
     },
     hamburgerClick(e) {
       e.currentTarget.classList.toggle('is-active')
+      // e.currentTarget.className += 'is-active'
+      this.whiteHeader = !this.whiteHeader
     },
     // navOpen() {
     //   if (this.navOpen) {
@@ -232,16 +240,12 @@ export default {
     //     this.hamburgerClick = 0
     //   }
     // },
-    headerColorChange() {
-      this.whiteHeader = 'white'
-    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .navbar-black {
-  opacity: 1;
   background-color: $background_color;
 }
 .container-raw {
