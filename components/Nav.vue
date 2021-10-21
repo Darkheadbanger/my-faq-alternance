@@ -42,17 +42,12 @@
       <nav
         class="
           absolute
-          top-0
-          left-0
-          right-0
-          bottom-0
+          md:top-0 md:left-0 md:right-0 md:bottom-0
           invisible
-          md:visible
-          mt-2.5
-          menu
+          md:visible md:mt-2.5
         "
         :class="{
-          'menu-active': !view.whiteHeader,
+          'menu-active': view.whiteHeader,
           '': !view.whiteHeader,
         }"
       >
@@ -225,7 +220,6 @@ export default {
       // hamburgerClick(e) {
       e.currentTarget.classList.toggle('is-active')
       this.view.whiteHeader = !this.view.whiteHeader
-      // this.view.navLeftActive = !this.view.navLeftActive
     },
   },
 }
@@ -239,31 +233,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 91.666667%;
-  .menu {
-    @media (max-width: 768px) {
-      .menu {
-        background-color: $background_color;
-        height: 100vh;
-        width: 100vw;
-        margin-left: -100vw;
-        transition: margin-left 1s;
-        opacity: 1;
-      }
-    }
-    .navbar-menu {
-      width: auto;
-      display: flex;
-      align-items: baseline;
-      margin-left: -0.5rem;
-      margin-right: -0.5rem;
-      ul {
-        list-style: none;
-      }
-    }
-    .menu-active {
-      margin-left: 0;
-    }
-  }
+
   .hamburger--color {
     color: $eveho_color;
   }
@@ -271,7 +241,42 @@ export default {
     color: $eveho_color;
   }
 }
-.scrollColor {
-  background-color: $background_color;
+header {
+  // @media (max-width: 768px) {
+  //   .menu {
+  //     background-color: $background_color;
+  //     height: 100vh;
+  //     width: 100vw;
+  //     // margin-left: -100vw;
+  //     margin-left: 0;
+  //     transition: margin-left 1s;
+  //     opacity: 1;
+  //   }
+  // }
+  .menu {
+    background-color: $background_color;
+    height: 100vh;
+    width: 100vw;
+    // margin-left: -100vw;
+    margin-left: 0;
+    transition: margin-left 1s;
+    opacity: 1;
+  }
+  // .menu-active {
+  //   margin-left: 0;
+  // }
+  .navbar-menu {
+    width: auto;
+    display: flex;
+    align-items: baseline;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    ul {
+      list-style: none;
+    }
+  }
+  .scrollColor {
+    background-color: $background_color;
+  }
 }
 </style>
