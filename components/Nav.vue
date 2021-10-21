@@ -38,17 +38,17 @@
           </span>
         </button>
       </div>
-      <!-- Pour le menu nav animation -->
+      <!-- Pour le menu nav animation invisible
+          md:visible -->
       <nav
         class="
           absolute
-          md:top-0 md:left-0 md:right-0 md:bottom-0
-          invisible
-          md:visible md:mt-2.5
+          md:top-0 md:left-0 md:right-0 md:bottom-0 md:mt-2.5
+          menu
         "
         :class="{
-          'menu-active': view.whiteHeader,
-          '': !view.whiteHeader,
+          'menu-active': !view.whiteHeader,
+          '': view.whiteHeader,
         }"
       >
         <ul
@@ -257,14 +257,14 @@ header {
     background-color: $background_color;
     height: 100vh;
     width: 100vw;
-    // margin-left: -100vw;
-    margin-left: 0;
+    margin-left: -105vw;
+    // margin-left: 0;
     transition: margin-left 1s;
     opacity: 1;
   }
-  // .menu-active {
-  //   margin-left: 0;
-  // }
+  .menu-active {
+    margin-left: -6vw;
+  }
   .navbar-menu {
     width: auto;
     display: flex;
