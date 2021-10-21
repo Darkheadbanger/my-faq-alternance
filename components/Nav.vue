@@ -41,8 +41,9 @@
       <!-- Pour le humburger -->
       <div class="my-auto md:hidden">
         <!-- Hamburger à faire, hamburger--spring is--active -->
+        <!--:class="{'is-active': view.hamburgerClicks ? '' : !view.hamburgerClicks}" -->
         <button
-          class="hamburger hamburger--spring"
+          class="hamburger hamburger--spring buttonHamburger"
           type="button"
           @click="hamburgerClick"
         >
@@ -203,7 +204,7 @@ export default {
     return {
       view: {
         beforeScroll: 1, // true
-        hamburgerClick: true,
+        hamburgerClicks: true,
         // navOpen: 1, // true
         whiteHeader: true,
       },
@@ -229,10 +230,16 @@ export default {
       }
     },
     hamburgerClick(e) {
+      // this.$el.querySelector('.buttonHamburger').classList.toggle('is-active')
+      // hamburgerClick(e) {
       e.currentTarget.classList.toggle('is-active')
+      // this.view.hamburgerClicks = !this.view.hamburgerClicks
       // e.currentTarget.className += 'is-active'
-      this.whiteHeader = !this.whiteHeader
+      this.view.whiteHeader = !this.view.whiteHeader
     },
+    // hamburgerClick(e) {
+    //   this.view.hamburgerClicks = !this.view.hamburgerClicks
+    // },
     // navOpen() {
     //   if (this.navOpen) {
     //     this.hamburgerClick = 1
