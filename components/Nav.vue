@@ -1,11 +1,4 @@
 <template>
-  <!-- navbar-black -->
-  <!-- Change color on scroll dosen't work -->
-  <!-- Hamburger dosen't work, i tried -->
-  <!-- :class="{ `bg-white`: scrollPosition > 0 }" -->
-  <!-- @scroll="handleScroll" -->
-  <!-- 'bg-red-500': !view.hamburgerClick, -->
-  <!-- :style="{ 'background-color': view.whiteHeader }" -->
   <header
     id="navbar"
     :class="{
@@ -23,10 +16,6 @@
         to="/"
         class="z-10 my-auto flex h-6 header-logo nuxt_link_active"
       >
-        <!-- &&
-                view.whiteHeader
-              ? require(`~/assets/images/logo/logo-white.svg`)
-              : require(`~/assets/images/logo/logo-color.svg`) -->
         <img
           class="h-full my-auto"
           :src="
@@ -36,12 +25,9 @@
           "
           alt="Logo"
         />
-        <!-- view.hamburgerClick ? require(`~/assets/images/logo/logo-white.svg`) : require(`~/assets/images/logo/logo-color.svg`), -->
       </NuxtLink>
       <!-- Pour le humburger -->
       <div class="my-auto md:hidden">
-        <!-- Hamburger à faire, hamburger--spring is--active -->
-        <!--:class="{'is-active': view.hamburgerClicks ? '' : !view.hamburgerClicks}" -->
         <button
           class="hamburger hamburger--spring buttonHamburger"
           type="button"
@@ -63,7 +49,12 @@
           invisible
           md:visible
           mt-2.5
+          menu
         "
+        :class="{
+          'menu-active': !view.whiteHeader,
+          '': !view.whiteHeader,
+        }"
       >
         <ul
           class="navbar-menu text-white text-xs md:flex md:justify-end"
@@ -205,8 +196,8 @@ export default {
       view: {
         beforeScroll: 1, // true
         hamburgerClicks: true,
-        // navOpen: 1, // true
         whiteHeader: true,
+        // navLeftActive: true,
       },
     }
   },
@@ -233,20 +224,9 @@ export default {
       // this.$el.querySelector('.buttonHamburger').classList.toggle('is-active')
       // hamburgerClick(e) {
       e.currentTarget.classList.toggle('is-active')
-      // this.view.hamburgerClicks = !this.view.hamburgerClicks
-      // e.currentTarget.className += 'is-active'
       this.view.whiteHeader = !this.view.whiteHeader
+      // this.view.navLeftActive = !this.view.navLeftActive
     },
-    // hamburgerClick(e) {
-    //   this.view.hamburgerClicks = !this.view.hamburgerClicks
-    // },
-    // navOpen() {
-    //   if (this.navOpen) {
-    //     this.hamburgerClick = 1
-    //   } else {
-    //     this.hamburgerClick = 0
-    //   }
-    // },
   },
 }
 </script>
@@ -259,25 +239,18 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 91.666667%;
-
   .menu {
-    background-color: $background_color;
-    height: 100vh;
-    width: 100vw;
-    margin-left: -100vw;
-    transition: margin-left 1s;
-    .menu-big {
-      background-color: $background_color;
-      height: 100vh;
-      width: 100vw;
-      margin-left: -100vw;
-      transition: margin-left 1s;
+    @media (max-width: 768px) {
+      .menu {
+        background-color: $background_color;
+        height: 100vh;
+        width: 100vw;
+        margin-left: -100vw;
+        transition: margin-left 1s;
+        opacity: 1;
+      }
     }
     .navbar-menu {
-      // list-style-type: none;
-      // padding-left: 0;
-      // width: 91.666667%;
-      // margin: auto;
       width: auto;
       display: flex;
       align-items: baseline;
@@ -286,6 +259,9 @@ export default {
       ul {
         list-style: none;
       }
+    }
+    .menu-active {
+      margin-left: 0;
     }
   }
   .hamburger--color {
