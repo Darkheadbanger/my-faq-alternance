@@ -17,19 +17,7 @@
             duration-300
             bg-gray-100
           "
-          :class="{
-            [`mb-5
-            py-4
-            md:py-8
-            px-5
-            md:px-10
-            transition-colors
-            duration-300
-            bg-gray-200
-`]: infoOpen,
-          }"
           type="button"
-          @click="infoOpen = !infoOpen"
         >
           <p
             class="
@@ -41,36 +29,13 @@
               transition-all
               duration-300
             "
-            :class="{
-              [`md:text-xl
-              font-semibold
-              flex
-              justify-between
-              cursor-pointer
-              transition-all
-              duration-300
- mb-6`]: infoOpen,
-            }"
           >
             <span class="my-auto">
               {{ cardsinfo.title }}
             </span>
             <!-- fontawesome -rotate-180 quans s'ouvre -->
             <span class="my-auto">
-              <button
-                :class="{
-                  [`text-gray-400
-                    transform
-                    transition
-                    duration-300
-                    w-6
-                    text-gray-a6
-                    stroke-current
--rotate-180`]: infoOpen,
-                }"
-                type="button"
-                @click="infoOpen = !infoOpen"
-              >
+              <button type="button" @click="informationOpenAndClosed">
                 <font-awesome-icon
                   class="
                     text-gray-400
@@ -98,6 +63,9 @@
               overflow-hidden
               paragraph
             "
+            :class="{
+              'info-closed-open': !view.infoOpen,
+            }"
           >
             <p class="font-medium mb-1">{{ cardsinfo.reponse.reponse }}</p>
             <div>
@@ -123,6 +91,17 @@ export default {
         infoOpen: true,
       },
     }
+  },
+  mounted() {
+    window.addEventListener('click', this.informationOpenAndClosed)
+  },
+  destroyed() {
+    window.removeEventListener('click', this.informationOpenAndClosed)
+  },
+  methods: {
+    informationOpenAndClosed() {
+      this.view.infoOpen = !this.view.infoOpen
+    },
   },
 }
 </script>
