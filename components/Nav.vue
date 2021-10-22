@@ -104,14 +104,7 @@
           </li>
 
           <li
-            class="
-              relative
-              md:mx-3
-              py-1
-              md:pt-3.5
-              border-green-300
-              md:text-white
-            "
+            class="relative md:mx-3 py-1 md:pt-3.5 text-green-300 md:text-white"
             :class="{ 'md:text-gray-900': !view.beforeScroll }"
           >
             <div>
