@@ -1,6 +1,4 @@
-$hamburger-padding-x: 20px;
-$hamburger-padding-y: 15px;
-$hamburger-types: (collapse);
-$hamburger-layer-color: white;
+$hamburger-layer-color: $hamburger_color;
 $hamburger-active-layer-color: $hamburger-layer-color;
+@import 'hamburgers-settings';
 @import 'hamburgers';
