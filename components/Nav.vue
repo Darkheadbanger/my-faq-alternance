@@ -51,11 +51,14 @@
       >
         <ul
           class="
-            mt-16
+            mt-12
             ml-11
             md:ml-0 md:mt-0 md:navbar-menu md:text-white md:text-xs
-            text-3xl
+            text-2xl
             md:flex md:justify-end
+            font-normal
+            uppercase
+            md:normal-case
           "
           :class="{ 'md:text-gray-900': !view.beforeScroll }"
         >
@@ -100,7 +103,17 @@
             </div>
           </li>
 
-          <li class="relative md:mx-3 py-1 md:pt-3.5">
+          <li
+            class="
+              relative
+              md:mx-3
+              py-1
+              md:pt-3.5
+              border-green-300
+              md:text-white
+            "
+            :class="{ 'md:text-gray-900': !view.beforeScroll }"
+          >
             <div>
               <NuxtLink
                 to="/garanties-shoppingauto"
@@ -166,13 +179,13 @@
                   ></path>
                 </svg>
                 <span
-                  class="md:my-auto md:text-xs md:mr-1 md:text-white"
+                  class="md:my-auto md:text-xs md:mr-1 md:text-white text-black"
                   :class="{ 'md:text-gray-900': !view.beforeScroll }"
                 >
                   (0)
                 </span>
                 <span
-                  class="md:text-white"
+                  class="md:text-white text-black"
                   :class="{ 'md:text-gray-900': !view.beforeScroll }"
                 >
                   Ma liste
