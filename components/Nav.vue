@@ -162,7 +162,9 @@
                     md:mt-1
                     text-primary
                     svg-inline--fa
-                    fa-heart fa-w-16
+                    fa-heart fa-w-16 fa-w-8-custom
+                    pt-2.5
+                    md:pt-0
                   "
                 >
                   <path
@@ -172,7 +174,13 @@
                   ></path>
                 </svg>
                 <span
-                  class="md:my-auto md:text-xs md:mr-1 md:text-white text-black"
+                  class="
+                    mr-2
+                    md:mr-0 md:my-auto
+                    text-xs
+                    md:mr-1 md:text-white
+                    text-black
+                  "
                   :class="{ 'md:text-gray-900': !view.beforeScroll }"
                 >
                   (0)
@@ -260,6 +268,9 @@ header {
       // margin-left: 0;
       transition: margin-left 1s;
       opacity: 1;
+    }
+    .fa-w-8-custom {
+      width: 0.85rem;
     }
   }
   .menu-active {
