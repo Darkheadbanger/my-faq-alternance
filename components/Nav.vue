@@ -27,9 +27,9 @@
         />
       </NuxtLink>
       <!-- Pour le humburger -->
-      <div class="my-auto md:hidden">
+      <div class="my-auto md:hidden z-10">
         <button
-          class="hamburger hamburger--spring buttonHamburger"
+          class="hamburger hamburger--spring buttonHamburger z-50"
           type="button"
           @click="hamburgerClick"
         >
