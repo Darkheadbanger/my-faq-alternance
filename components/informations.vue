@@ -3,7 +3,7 @@
     <div class="relative bg-white faq flex flex-wrap content-center">
       <section
         id="faq"
-        class="text-black mt-10 md:my container sm:mx-10 mx-12 lg:mx-24"
+        class="text-black mt-10 md:my container sm:mx-10 mx-12 lg:mx-28"
       >
         <!-- bg-ray f-9 on change -->
         <div
