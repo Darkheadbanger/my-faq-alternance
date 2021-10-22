@@ -53,18 +53,14 @@
           class="
             mt-16
             ml-11
-            md:ml-0
-            md:mt-0
-            md:navbar-menu
-            md:text-white
-            md:text-xs
-            md:flex
-            md:justify-end
+            md:ml-0 md:mt-0 md:navbar-menu md:text-white md:text-xs
+            text-3xl
+            md:flex md:justify-end
           "
           :class="{ 'md:text-gray-900': !view.beforeScroll }"
         >
           <!-- container dropdown 5X -->
-          <li class="relative md:mx-3 pt-1 md:pt-3.5">
+          <li class="relative md:mx-3 py-1 md:pt-3.5">
             <a href="/voitures occasion">
               <img
                 class="h-5 md:3 inline mr-2 my-auto"
@@ -76,7 +72,7 @@
           </li>
           <!-- Pour ma liste -->
 
-          <li class="relative md:mx-3 pt-1 md:pt-3.5">
+          <li class="relative md:mx-3 py-1 md:pt-3.5">
             <div>
               <NuxtLink to="/garanties-shoppingauto">
                 <!-- Symbol coeur -->
@@ -90,7 +86,7 @@
             </div>
           </li>
 
-          <li class="relative md:mx-3 pt-1 md:pt-3.5">
+          <li class="relative md:mx-3 py-1 md:pt-3.5">
             <div>
               <a href="/qui-sommes-nous">
                 <!-- Symbol coeur -->
@@ -104,7 +100,7 @@
             </div>
           </li>
 
-          <li class="relative md:mx-3 pt-1 md:pt-3.5">
+          <li class="relative md:mx-3 py-1 md:pt-3.5">
             <div>
               <NuxtLink
                 to="/garanties-shoppingauto"
@@ -121,7 +117,7 @@
             </div>
           </li>
 
-          <li class="relative md:mx-3 pt-1 md:pt-3.5">
+          <li class="relative md:mx-3 py-1 md:pt-3.5">
             <div>
               <a href="/garanties-shoppingauto">
                 <img
@@ -135,7 +131,7 @@
           </li>
 
           <!-- Ma liste -->
-          <li class="relative md:mx-3 pt-1 md:pt-3.5">
+          <li class="relative md:mx-3 py-1 md:pt-3.5">
             <div
               class="
                 border border-primary
@@ -156,7 +152,6 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                   class="
-                    text-sm
                     my-auto
                     md:mt-1
                     text-primary
