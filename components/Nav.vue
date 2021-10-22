@@ -242,26 +242,26 @@ export default {
   }
 }
 header {
-  // @media (max-width: 768px) {
-  //   .menu {
-  //     background-color: $background_color;
-  //     height: 100vh;
-  //     width: 100vw;
-  //     // margin-left: -100vw;
-  //     margin-left: 0;
-  //     transition: margin-left 1s;
-  //     opacity: 1;
-  //   }
-  // }
-  .menu {
-    background-color: $background_color;
-    height: 100vh;
-    width: 100vw;
-    margin-left: -105vw;
-    // margin-left: 0;
-    transition: margin-left 1s;
-    opacity: 1;
+  @media (max-width: 768px) {
+    .menu {
+      background-color: $background_color;
+      height: 100vh;
+      width: 100vw;
+      margin-left: -105vw;
+      // margin-left: 0;
+      transition: margin-left 1s;
+      opacity: 1;
+    }
   }
+  // .menu {
+  //   background-color: $background_color;
+  //   height: 100vh;
+  //   width: 100vw;
+  //   margin-left: -105vw;
+  //   // margin-left: 0;
+  //   transition: margin-left 1s;
+  //   opacity: 1;
+  // }
   .menu-active {
     margin-left: -6vw;
   }
