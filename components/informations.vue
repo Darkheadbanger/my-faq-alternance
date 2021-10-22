@@ -64,7 +64,7 @@
               paragraph
             "
             :class="{
-              'info-closed-open': !view.infoOpen,
+              'info-closed-open-custom': !view.infoOpen,
             }"
           >
             <p class="font-medium mb-1">{{ cardsinfo.reponse.reponse }}</p>
