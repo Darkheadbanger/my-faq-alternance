@@ -38,8 +38,6 @@
           </span>
         </button>
       </div>
-      <!-- Pour le menu nav animation invisible
-          md:visible -->
       <nav
         class="
           absolute
@@ -52,11 +50,21 @@
         }"
       >
         <ul
-          class="navbar-menu text-white text-xs md:flex md:justify-end"
-          :class="{ 'text-gray-900': !view.beforeScroll }"
+          class="
+            mt-16
+            ml-11
+            md:ml-0
+            md:mt-0
+            md:navbar-menu
+            md:text-white
+            md:text-xs
+            md:flex
+            md:justify-end
+          "
+          :class="{ 'md:text-gray-900': !view.beforeScroll }"
         >
           <!-- container dropdown 5X -->
-          <li class="container-dropdown mx-3">
+          <li class="relative md:mx-3 pt-1 md:pt-3.5">
             <a href="/voitures occasion">
               <img
                 class="h-5 md:3 inline mr-2 my-auto"
@@ -68,7 +76,7 @@
           </li>
           <!-- Pour ma liste -->
 
-          <li class="container-dropdown mx-3">
+          <li class="relative md:mx-3 pt-1 md:pt-3.5">
             <div>
               <NuxtLink to="/garanties-shoppingauto">
                 <!-- Symbol coeur -->
@@ -82,7 +90,7 @@
             </div>
           </li>
 
-          <li class="container-dropdown mx-3">
+          <li class="relative md:mx-3 pt-1 md:pt-3.5">
             <div>
               <a href="/qui-sommes-nous">
                 <!-- Symbol coeur -->
@@ -96,7 +104,7 @@
             </div>
           </li>
 
-          <li class="container-dropdown mx-3">
+          <li class="relative md:mx-3 pt-1 md:pt-3.5">
             <div>
               <NuxtLink
                 to="/garanties-shoppingauto"
@@ -113,7 +121,7 @@
             </div>
           </li>
 
-          <li class="container-dropdown mx-3">
+          <li class="relative md:mx-3 pt-1 md:pt-3.5">
             <div>
               <a href="/garanties-shoppingauto">
                 <img
@@ -127,11 +135,11 @@
           </li>
 
           <!-- Ma liste -->
-          <li class="container-dropdown mx-3">
+          <li class="relative md:mx-3 pt-1 md:pt-3.5">
             <div
               class="
                 border border-primary
-                py-1
+                py-1.5
                 px-2
                 rounded-full
                 border-green-300
@@ -163,14 +171,14 @@
                   ></path>
                 </svg>
                 <span
-                  class="my-auto text-xs mr-1 text-white"
-                  :class="{ 'text-gray-900': !view.beforeScroll }"
+                  class="md:my-auto md:text-xs md:mr-1 md:text-white"
+                  :class="{ 'md:text-gray-900': !view.beforeScroll }"
                 >
                   (0)
                 </span>
                 <span
-                  class="text-white"
-                  :class="{ 'text-gray-900': !view.beforeScroll }"
+                  class="md:text-white"
+                  :class="{ 'md:text-gray-900': !view.beforeScroll }"
                 >
                   Ma liste
                 </span>
@@ -253,15 +261,6 @@ header {
       opacity: 1;
     }
   }
-  // .menu {
-  //   background-color: $background_color;
-  //   height: 100vh;
-  //   width: 100vw;
-  //   margin-left: -105vw;
-  //   // margin-left: 0;
-  //   transition: margin-left 1s;
-  //   opacity: 1;
-  // }
   .menu-active {
     margin-left: -6vw;
   }
