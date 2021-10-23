@@ -64,9 +64,17 @@
               paragraph
             "
             :class="{
-              'info-closed-open-custom': !view.infoOpen,
+              'h-0': !view.infoOpen,
             }"
           >
+            <!-- :class="[
+              cardsinfo.reponse.indexOf(id) === cardsinfo.reponse.id
+                ? 'h-0'
+                : !view.infoOpen,
+            ]" -->
+            <!-- :class="{
+              'h-0': !view.infoOpen,
+            }" -->
             <p class="font-medium mb-1">{{ cardsinfo.reponse.reponse }}</p>
             <div>
               <p>
@@ -100,7 +108,14 @@ export default {
   },
   methods: {
     informationOpenAndClosed() {
-      this.view.infoOpen = !this.view.infoOpen
+      // Créer un boucle pour faire tourner jusqu'à moins l'id de mon API.
+      // Une fois la boucle est finit, il faut comparer l'id trouver dans api à l'id de div qu'on veut cliquer.
+      // Ensuite, on ouvre le div avec cet id là ou le bon id
+      if (this.cardsinfo.id) {
+        this.view.infoOpen = !this.view.infoOpen
+      }
+      // eslint-disable-next-line no-console
+      console.log(this.cardsinfo)
     },
   },
 }
