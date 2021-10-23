@@ -111,9 +111,12 @@ export default {
       // Créer un boucle pour faire tourner jusqu'à moins l'id de mon API.
       // Une fois la boucle est finit, il faut comparer l'id trouver dans api à l'id de div qu'on veut cliquer.
       // Ensuite, on ouvre le div avec cet id là ou le bon id
-      if (this.cardsinfo.id) {
-        this.view.infoOpen = !this.view.infoOpen
+      for (let i = 0; i < this.cardsinfo; i++) {
+        if (this.cardsinfo.id) {
+          this.view.infoOpen = !this.view.infoOpen
+        }
       }
+
       // eslint-disable-next-line no-console
       console.log(this.cardsinfo)
     },
