@@ -84,6 +84,8 @@
 
 <script>
 export default {
+  // eslint-disable-next-line vue/component-definition-name-casing
+  name: 'informations',
   // eslint-disable-next-line vue/prop-name-casing
   // eslint-disable-next-line vue/require-prop-types
   props: ['cardsinfo'],
