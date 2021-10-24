@@ -16,8 +16,8 @@
       <div id="__layout">
         <Nav />
         <Hero-Header />
-        <Call />
         <Footer />
+        <Call />
       </div>
     </div>
   </body>
