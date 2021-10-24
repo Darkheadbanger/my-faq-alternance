@@ -46,6 +46,7 @@
                     text-gray-a6
                     stroke-current
                   "
+                  :class="{ 'rotate-180': !view.infoOpen }"
                   size="2x"
                   :icon="['fas', 'chevron-down']"
                 />
@@ -127,6 +128,9 @@ export default {
 section {
   .container {
     max-width: 1295px;
+  }
+  .-rotate-180 {
+    transform: rotate(-180deg);
   }
 }
 </style>
