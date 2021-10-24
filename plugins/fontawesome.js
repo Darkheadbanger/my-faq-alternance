@@ -5,7 +5,7 @@ import {
   faSpinner,
   fas,
   faChevronLeft,
-  faChevronUp,
+  faChevronDown,
   faPhone,
 } from '@fortawesome/free-solid-svg-icons'
 import {
@@ -22,7 +22,7 @@ config.autoAddCss = false
 library.add(
   faSpinner,
   faChevronLeft,
-  faChevronUp,
+  faChevronDown,
   faFacebook,
   fas,
   faInstagramSquare,

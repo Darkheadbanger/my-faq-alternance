@@ -35,7 +35,7 @@
             </span>
             <!-- fontawesome -rotate-180 quans s'ouvre -->
             <span class="my-auto">
-              <button type="button" @click="informationOpenAndClosed">
+              <button type="button" @click="informationOpenAndClosed($event)">
                 <font-awesome-icon
                   class="
                     text-gray-400
@@ -47,13 +47,14 @@
                     stroke-current
                   "
                   size="2x"
-                  :icon="['fas', 'chevron-up']"
+                  :icon="['fas', 'chevron-down']"
                 />
               </button>
             </span>
           </p>
           <!-- Pour écrire l'explication -->
           <div
+            id="foo"
             class="
               md:border-l-8 md:pl-6
               text-sm
@@ -67,14 +68,6 @@
               'h-0': !view.infoOpen,
             }"
           >
-            <!-- :class="[
-              cardsinfo.reponse.indexOf(id) === cardsinfo.reponse.id
-                ? 'h-0'
-                : !view.infoOpen,
-            ]" -->
-            <!-- :class="{
-              'h-0': !view.infoOpen,
-            }" -->
             <p class="font-medium mb-1">{{ cardsinfo.reponse.reponse }}</p>
             <div>
               <p>
@@ -107,18 +100,24 @@ export default {
     window.removeEventListener('click', this.informationOpenAndClosed)
   },
   methods: {
-    informationOpenAndClosed() {
-      // Créer un boucle pour faire tourner jusqu'à moins l'id de mon API.
-      // Une fois la boucle est finit, il faut comparer l'id trouver dans api à l'id de div qu'on veut cliquer.
-      // Ensuite, on ouvre le div avec cet id là ou le bon id
-      for (let i = 0; i < this.cardsinfo; i++) {
-        if (this.cardsinfo.id) {
-          this.view.infoOpen = !this.view.infoOpen
-        }
-      }
-
+    informationOpenAndClosed(event) {
+      // Créer un boucle pour faire tourner les 6 id.
+      // Une fois la boucle est finit, il faut comparer l'id trouver dans api a l'id de div qu'on veut cliquer.
+      // Ensuite, on ouvre le div avec le bon id
+      // for (let i = 0; i < this.cardsinfo; i++) {
+      //   // eslint-disable-next-line prefer-const
+      //   let infoId = this.cardsinfo[i]
+      //   if (infoId) {
+      //     // eslint-disable-next-line prefer-const
+      //     let targetId = event.currentTarget.id
+      //     if (targetId) {
+      //       targetId = this.cardsinfo.id
+      //     }
+      //   }
+      // }
+      this.view.infoOpen = !this.view.infoOpen
       // eslint-disable-next-line no-console
-      console.log(this.cardsinfo)
+      console.log(this.$refs)
     },
   },
 }
