@@ -35,7 +35,11 @@
             </span>
             <!-- fontawesome -rotate-180 quans s'ouvre -->
             <span class="my-auto">
-              <button type="button" @click="informationOpenAndClosed($event)">
+              <button
+                ref="buttonInfo"
+                type="button"
+                @click="informationOpenAndClosed($event)"
+              >
                 <font-awesome-icon
                   class="
                     text-gray-400
@@ -96,12 +100,12 @@ export default {
       },
     }
   },
-  mounted() {
-    window.addEventListener('click', this.informationOpenAndClosed)
-  },
-  destroyed() {
-    window.removeEventListener('click', this.informationOpenAndClosed)
-  },
+  // mounted() {
+  //   document.addEventListener('click', this.informationOpenAndClosed)
+  // },
+  // destroyed() {
+  //   document.removeEventListener('click', this.informationOpenAndClosed)
+  // },
   methods: {
     informationOpenAndClosed(event) {
       // Créer un boucle pour faire tourner les 6 id.
@@ -120,7 +124,7 @@ export default {
       // }
       this.view.infoOpen = !this.view.infoOpen
       // eslint-disable-next-line no-console
-      console.log(this.$refs)
+      console.log(this.$refs, event)
     },
   },
 }
