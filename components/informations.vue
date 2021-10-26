@@ -100,28 +100,8 @@ export default {
       },
     }
   },
-  // mounted() {
-  //   document.addEventListener('click', this.informationOpenAndClosed)
-  // },
-  // destroyed() {
-  //   document.removeEventListener('click', this.informationOpenAndClosed)
-  // },
   methods: {
     informationOpenAndClosed(event) {
-      // Créer un boucle pour faire tourner les 6 id.
-      // Une fois la boucle est finit, il faut comparer l'id trouver dans api a l'id de div qu'on veut cliquer.
-      // Ensuite, on ouvre le div avec le bon id
-      // for (let i = 0; i < this.cardsinfo; i++) {
-      //   // eslint-disable-next-line prefer-const
-      //   let infoId = this.cardsinfo[i]
-      //   if (infoId) {
-      //     // eslint-disable-next-line prefer-const
-      //     let targetId = event.currentTarget.id
-      //     if (targetId) {
-      //       targetId = this.cardsinfo.id
-      //     }
-      //   }
-      // }
       this.view.infoOpen = !this.view.infoOpen
       // eslint-disable-next-line no-console
       console.log(this.$refs, event)
